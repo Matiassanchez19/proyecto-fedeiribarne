@@ -1,0 +1,260 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    
+}
+
+.gold-bg{
+    background-color: goldenrod;
+}
+
+/* estilos de inicio */
+
+.contenedor h1{
+    color: goldenrod;
+    text-align: center;
+    margin: 15px;
+}
+
+.contenedor section h2{
+    color: whitesmoke;
+    margin: 20px;
+}
+
+.contenedor section p{
+    color: goldenrod;
+    margin: 15px;
+}
+
+.contenedor section div img{
+    margin: 2.5rem;
+}
+
+.contenedor div h2{
+    color: whitesmoke;
+    text-align: center;
+    border: solid goldenrod;
+}
+
+
+
+.caj1{
+    margin: 15px;
+    padding: 10px;
+    color: goldenrod;
+    border: solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.caj2{
+    margin: 15px;
+    padding: 10px;
+    color: goldenrod;
+    border: solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.caj3{
+    margin: 15px;
+    padding: 10px;
+    color: goldenrod;
+    border: solid whitesmoke;
+    display: flex;
+    flex-direction: column;
+
+}
+
+footer{
+    text-align: center;
+    color: whitesmoke;
+}
+
+/* estilos de biografia */
+
+.contenedor-bio h1{
+    color: goldenrod;
+    text-align: center;
+    margin: 15px;
+}
+
+.contenedor-bio div img{
+    display: none;
+}
+
+.contenedor-bio div p{
+    color: goldenrod;
+    margin: 15px;
+}
+
+.contenedor-bio div p span{
+    
+    color: blue;
+}
+
+.contenedor-bio div h2{
+    color: whitesmoke;
+    margin: 20px;
+}
+
+.li-bio{
+    color: blue;
+}
+
+/* estilos de calendario */
+
+.contenedor-cal{
+    display: grid;
+    place-items: center;
+    
+}
+
+.contenedor-cal h1{
+    color: goldenrod;
+    margin: 15px;
+}
+
+.contenedor-cal h2{
+    color: whitesmoke;
+    margin: 20px;
+}
+
+.contenedor-cal .items{
+    margin: 15px;
+    padding: 10px;
+    border: solid goldenrod;
+}
+
+.contenedor-cal .items p{
+    color: goldenrod;
+}
+
+.contenedor-cal .items img{
+    width: 20rem;
+}
+
+/* estilos de patrocinadores */
+
+.contenedor-pa h1{
+    color: goldenrod;
+    text-align: center;
+}
+
+.patro-uno img{
+    width: 20rem;
+    margin: 20px;
+}
+
+.patro-dos img{
+    width: 20rem;
+    margin: 20px;
+}
+
+.patro-tres img{
+    width: 20rem;
+    margin: 20px;
+}
+
+
+.patro-cuatro img{
+    width: 20rem;
+    margin: 20px;
+}
+
+
+/* estilos de contacto */
+
+.contenedor-form{
+    width: 100%;
+    margin: 15px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr) ;
+    grid-template-rows: 2,1fr;
+    grid-gap: 50px;
+    margin-top: 90px;
+
+}
+
+.contenedor-form h2{
+    color: goldenrod;
+    margin-bottom: 15px;
+    font-size: 35px;
+}
+.contenedor-form p{
+    color: goldenrod;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contenedor-form a{
+    font-size: 17px;
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+
+    margin-bottom: 15px;
+    color: black;
+    font-weight: 700;
+}
+
+.contenedor-form .datos{
+    color: blue;
+}
+
+.contenedor-form form .campo, textarea{
+    width: 90%;
+    padding: 15px 15px;
+    font-size: 15px;
+    border: 1px solid;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+    
+}
+
+.contenedor-form form textarea{
+    max-width: 530px;
+    min-width: none;
+    min-height: 140px;
+    max-height: 150px;
+}
+
+.contenedor-form .btn-enviar{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background-color: blue;
+    color: goldenrod;
+    border-radius: 3px;
+
+}
+
+/* estilos index computadora */
+
+@media screen and (min-width: 1024px){
+    .contenedor section div img{
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .contenedor .cajas{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+
+    .contenedor-bio div img{
+        display: flex;
+        float: left;
+    }
+}
