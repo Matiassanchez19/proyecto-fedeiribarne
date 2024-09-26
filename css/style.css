@@ -1,462 +1,283 @@
-/* reset */
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: black;
-
+body {
+  background-color: black;
 }
 
-.gold-bg{
-    background-color: goldenrod;
+.gold-bg {
+  background-color: goldenrod;
 }
 
-/* estilos de inicio */
+.contenedor h1 {
+  color: goldenrod;
+  margin: 15px;
+  text-align: center;
+}
+.contenedor section h2 {
+  color: whitesmoke;
+  margin: 20px;
+}
+.contenedor section p {
+  color: goldenrod;
+  margin: 15px;
+}
+.contenedor section div img {
+  width: 75%;
+  margin: 2.5rem;
+}
+.contenedor div h2 {
+  color: whitesmoke;
+  text-align: center;
+  border: solid goldenrod;
+}
 
-.contenedor h1{
-    color: goldenrod;
+.caja {
+  margin: 15px;
+  padding: 10px;
+  color: goldenrod;
+  border: solid whitesmoke;
+  display: flex;
+  flex-direction: column;
+}
+
+.cajas {
+  display: grid;
+}
+
+.imgcaj1 {
+  width: 100%;
+  height: 53%;
+}
+
+.imgcaj2 {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.contenedor-bio h1 {
+  color: goldenrod;
+  margin: 15px;
+  text-align: center;
+}
+.contenedor-bio div img {
+  display: none;
+}
+.contenedor-bio div p {
+  color: goldenrod;
+  margin: 15px;
+}
+.contenedor-bio div p span {
+  color: blue;
+}
+.contenedor-bio div h2 {
+  color: whitesmoke;
+  margin: 20px;
+}
+
+.li-bio {
+  color: blue;
+}
+
+.contenedor-cal {
+  display: grid;
+  place-items: center;
+}
+
+main h1 {
+  color: goldenrod;
+  margin: 15px;
+  text-align: center;
+}
+main h2 {
+  color: whitesmoke;
+  margin: 20px;
+}
+
+.contenedor-cal1 {
+  display: grid;
+}
+
+.contenedor-cal .items {
+  margin: 15px;
+  padding: 10px;
+  border: solid goldenrod;
+}
+.contenedor-cal p {
+  color: goldenrod;
+}
+.contenedor-cal img {
+  width: 20rem;
+}
+
+.contenedor-1 {
+  display: grid;
+}
+
+.contenedor-pa {
+  display: grid;
+}
+.contenedor-pa h1 {
+  color: goldenrod;
+  text-align: center;
+}
+.contenedor-pa img {
+  width: 20rem;
+  margin: 10%;
+}
+
+.contenedor-form {
+  width: 100%;
+  margin: 10px;
+  display: grid;
+  margin-top: 90px;
+}
+.contenedor-form .titu-con {
+  color: goldenrod;
+  text-align: center;
+}
+.contenedor-form p {
+  color: goldenrod;
+  font-size: 17px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+.contenedor-form a {
+  font-size: 17px;
+  display: inline-block;
+  text-decoration: none;
+  width: 100%;
+  margin-bottom: 15px;
+  color: black;
+  font-weight: 700;
+}
+.contenedor-form .datos {
+  color: blue;
+}
+.contenedor-form form .campo, .contenedor-form form textarea {
+  width: 90%;
+  padding: 15px 15px;
+  font-size: 15px;
+  border: 1px solid;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: 0;
+}
+.contenedor-form form textarea {
+  max-width: 530px;
+  min-width: none;
+  min-height: 140px;
+  max-height: 150px;
+}
+.contenedor-form form .btn-enviar {
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: 0;
+  background-color: blue;
+  color: goldenrod;
+  border-radius: 3px;
+}
+
+@media screen and (min-width: 600px) {
+  .contenedor section div img {
+    margin: 10%;
+  }
+  .cajas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  main h1 {
     text-align: center;
-    margin: 15px;
+  }
+  .contenedor-cal1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .item-uno img,
+  .item-tres img {
+    height: 100%;
+  }
+  .contenedor-1 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .fech-cero img,
+  .fech-dos img,
+  .fech-tres img,
+  .fech-cuatro img {
+    height: 80%;
+  }
+  .contenedor-pa {
+    margin: 5%;
+    margin-right: 10%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .patro-uno img,
+  .patro-tres img {
+    height: 80%;
+  }
 }
-
-.contenedor section h2{
-    color: whitesmoke;
-    margin: 20px;
-}
-
-.contenedor section p{
-    color: goldenrod;
-    margin: 15px;
-}
-
-.contenedor section div img{
-    width: 75% ;
-    margin: 2.5rem;
-}
-
-.contenedor div h2{
-    color: whitesmoke;
-    text-align: center;
-    border: solid goldenrod;
-}
-
-.caja{
-    margin: 15px;
-    padding: 10px;
-    color: goldenrod;
-    border: solid whitesmoke;
+@media screen and (min-width: 1024px) {
+  .contenedor section div img {
+    margin-left: 25%;
+    width: 50%;
+  }
+  .cajas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .contenedor-bio div img {
     display: flex;
-    flex-direction: column;
-}
-
-.cajas{
-    display: grid;
-}
-
-
-
-
-
-.imgcaj1{
-    width: 100%;
-    height: 53%;
-}
-
-
-
-.imgcaj2{
-    width: 100%;
-}
-
-
-
-
-footer{
+    float: left;
+  }
+  .li-bio {
+    margin-bottom: 25px;
+  }
+  main h1 {
     text-align: center;
-    color: whitesmoke;
-}
-
-/* estilos de biografia */
-
-.contenedor-bio h1{
-    color: goldenrod;
-    text-align: center;
-    margin: 15px;
-}
-
-.contenedor-bio div img{
-    display: none;
-}
-
-.contenedor-bio div p{
-    color: goldenrod;
-    margin: 15px;
-}
-
-.contenedor-bio div p span{
-
-    color: blue;
-}
-
-.contenedor-bio div h2{
-    color: whitesmoke;
-    margin: 20px;
-}
-
-.li-bio{
-    color: blue;
-}
-
-/* estilos de calendario */
-
-.contenedor-cal{
-    display: grid;
-    place-items: center;
-
-}
-
-main h1{
-    color: goldenrod;
-    margin: 15px;
-}
-
-main h2{
-    color: whitesmoke;
-    margin: 20px;
-}
-
-.contenedor-cal1{
-    display: grid;
-
-}
-
-.contenedor-cal .items{
-    margin: 15px;
-    padding: 10px;
-    border: solid goldenrod;
-}
-
-.contenedor-cal p{
-    color: goldenrod;
-}
-
-.contenedor-cal img{
-    width: 20rem;
-}
-
-.contenedor-1{
-    display: grid;
-}
-
-/* estilos de patrocinadores */
-
-.contenedor-pa h1{
-    color: goldenrod;
-    text-align: center;
-}
-
-.contenedor-pa{
-    display: grid;
-}
-
-.patro-uno img{
-    width: 20rem;
-    margin: 11%;
-}
-
-.patro-dos img{
-    width: 20rem;
-    margin: 10%;
-}
-
-.patro-tres img{
-    width: 20rem;
-    margin: 10%;
-}
-
-
-.patro-cuatro img{
-    width: 20rem;
-    margin: 10%;
-}
-
-.patro-cinco img{
-    width: 20rem;
-    margin: 10%;
-}
-
-.patro-seis img{
-    width: 20rem;
-    margin: 10%;
-}
-
-.patro-siete img{
-    width: 20rem;
-    margin: 10%;
-}
-
-
-/* estilos de contacto */
-
-.contenedor-form{
-    width: 100%;
-    margin: 10px;
-    display: grid;
-    margin-top: 90px;
-
-}
-
-.titu-con{
-    color: goldenrod;
-    text-align: center;
-}
-
-.contenedor-form p{
-    color: goldenrod;
-    font-size: 17px;
-    line-height: 1.6;
-    margin-bottom: 30px;
-}
-
-.contenedor-form a{
-    font-size: 17px;
-    display: inline-block;
-    text-decoration: none;
-    width: 100%;
-
-    margin-bottom: 15px;
-    color: black;
-    font-weight: 700;
-}
-
-.contenedor-form .datos{
-    color: blue;
-}
-
-.contenedor-form form .campo, textarea{
-    width: 90%;
-    padding: 15px 15px;
-    font-size: 15px;
-    border: 1px solid;
-    margin-bottom: 20px;
-    border-radius: 3px;
-    outline: 0px;
-
-}
-
-.contenedor-form form textarea{
-    max-width: 530px;
-    min-width: none;
-    min-height: 140px;
-    max-height: 150px;
-}
-
-.contenedor-form .btn-enviar{
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    outline: 0px;
-    background-color: blue;
-    color: goldenrod;
-    border-radius: 3px;
-
-}
-
-/* estilos tablet */
-
-@media screen and (min-width: 600px){
-    /* inicio */
-
-    .contenedor section div img{
-        margin: 10%;
-    }
-
-    .cajas{
-        grid-template-columns: repeat(2,1fr);
-
-    }
-
-    /* calendario */
-
-    main h1{
-        text-align: center;
-    }
-
-    .contenedor-cal1{
-        grid-template-columns: repeat(2,1fr);
-      
-    }
-
-    .item-uno img{
-        height: 100%;
-    }
-
-    .item-tres img{
-        height: 100%;
-    }
-
-    .contenedor-1{
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .fech-cero img{
-        height: 80%;
-    }
-
-    .fech-dos img{
-        height: 80%;
-    }
-
-    .fech-tres img{
-        height: 80%;
-    }
-
-    .fech-cuatro img{
-        height: 80%;
-    }
-   
-    /* patrocinadores*/
-
-    .contenedor-pa{
-        margin: 5%;
-        margin-right: 10%;
-
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .patro-uno img{
-        height: 80%;
-    }
-
-    .patro-tres img{
-        height: 80%;
-    }
-
-
-    
-}
-
-/* estilos computadora */
-
-@media screen and (min-width: 1024px){
-
-    /* inicio */
-
-    .contenedor section div img{
-        margin-left: 25%;
-        width: 50%;
-    }
-
-    .cajas{
-        
-        grid-template-columns:repeat(3,1fr)
-    }
-
-    .contenedor-bio div img{
-        display: flex;
-        float: left;
-    }
-
-    /* estilos de biografia */
-
-    .li-bio{
-        margin-bottom: 25px;
-    }
-
-    /* estilos de calendario */
-
-    main h1{
-        text-align: center;
-    }
-
-    .contenedor-cal1{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-    }
-    .item-uno img{
-        height: 100%;
-    }
-
-    .item-dos img{
-        height: 100%;
-    }
-
-    .item-tres img{
-        height: 100%;
-    }
-
-    .contenedor-1{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(2,1fr);
-    }
-
-    .fech-cero img{
-        height: 80%;
-    }
-
-    .fech-uno img{
-        height: 80%;
-    }
-
-    .fech-dos img{
-        height: 80%;
-    }
-
-    .fech-tres img{
-        height: 80%;
-    }
-
-    .fech-cuatro img{
-        height: 80%;
-    }
-
-    /* estilos para patrocinadores */
-
-    .contenedor-pa{
-        margin: 5%;
-        margin-right: 10%;
-
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(3,1fr);
-        column-gap: 5%;
-    }
-
-    .patro-uno img{
-        height: 70%;
-        width: 100%;
-    }
-
-    .patro-dos img{
-        height: 70%;
-        width: 95%;
-    }
-
-    .patro-tres img{
-        height: 70%;
-        width: 95%;
-    }
-
-    /* estilos para contactos */
-
-   .contenedor-form{
-    grid-template-columns: repeat(2,1fr);
+  }
+  .contenedor-cal1 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .item-uno img,
+  .item-dos img,
+  .item-tres img {
+    height: 100%;
+  }
+  .contenedor-1 {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .fech-cero img,
+  .fech-uno img,
+  .fech-dos img,
+  .fech-tres img,
+  .fech-cuatro img {
+    height: 80%;
+  }
+  .contenedor-pa {
+    margin: 5%;
+    margin-right: 10%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 5%;
+  }
+  .patro-uno img,
+  .patro-dos img,
+  .patro-tres img {
+    height: 70%;
+    width: 95%;
+  }
+  .contenedor-form {
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 50px;
-    margin-top: 90px ;
-   }
-
-
-
-
-
-
+    margin-top: 90px;
+  }
 }
 
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,371 @@
+// Variables
+$color-principal: black;
+$color-header: goldenrod;
+$color-titulos: whitesmoke;
+$color-resaltar: blue;
+
+// Mixins
+@mixin center-text {
+    text-align: center;
+}
+
+@mixin border ($color) {
+    border: solid $color;
+}
+
+// Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Estilos generales
+body {
+    background-color: $color-principal;
+}
+
+.gold-bg {
+    background-color: $color-header;
+}
+
+// Estilos de inicio
+.contenedor {
+    h1 {
+        color: $color-header;
+        margin: 15px;
+        @include center-text;
+    }
+
+    section {
+        h2 {
+            color: $color-titulos;
+            margin: 20px;
+        }
+
+        p {
+            color: $color-header;
+            margin: 15px;
+        }
+
+        div {
+            img {
+                width: 75%;
+                margin: 2.5rem;
+            }
+        }
+    }
+
+    div {
+        h2 {
+            color: $color-titulos;
+            @include center-text;
+            @include border($color-header);
+        }
+    }
+}
+
+.caja {
+    margin: 15px;
+    padding: 10px;
+    color: $color-header;
+    @include border($color-titulos);
+    display: flex;
+    flex-direction: column;
+}
+
+.cajas {
+    display: grid;
+}
+
+.imgcaj1 {
+    width: 100%;
+    height: 53%;
+}
+
+.imgcaj2 {
+    width: 100%;
+}
+
+footer {
+    @include center-text;
+    color: $color-titulos;
+}
+
+// Estilos de biografía
+.contenedor-bio {
+    h1 {
+        color: $color-header;
+        margin: 15px;
+        @include center-text;
+    }
+
+    div {
+        img {
+            display: none;
+        }
+
+        p {
+            color: $color-header;
+            margin: 15px;
+
+            span {
+                color: $color-resaltar;
+            }
+        }
+
+        h2 {
+            color: $color-titulos;
+            margin: 20px;
+        }
+    }
+}
+
+.li-bio {
+    color: $color-resaltar;
+}
+
+// Estilos de calendario
+.contenedor-cal {
+    display: grid;
+    place-items: center;
+}
+
+main {
+    h1 {
+        color: $color-header;
+        margin: 15px;
+        @include center-text;
+    }
+
+    h2 {
+        color: $color-titulos;
+        margin: 20px;
+    }
+}
+
+.contenedor-cal1 {
+    display: grid;
+}
+
+.contenedor-cal {
+    .items {
+        margin: 15px;
+        padding: 10px;
+        @include border($color-header);
+    }
+
+    p {
+        color: $color-header;
+    }
+
+    img {
+        width: 20rem;
+    }
+}
+
+.contenedor-1 {
+    display: grid;
+}
+
+// Estilos de patrocinadores
+.contenedor-pa {
+    h1 {
+        color: $color-header;
+        @include center-text;
+    }
+
+    display: grid;
+
+    img {
+        width: 20rem;
+        margin: 10%;
+    }
+}
+
+// Estilos de contacto
+.contenedor-form {
+    width: 100%;
+    margin: 10px;
+    display: grid;
+    margin-top: 90px;
+
+    .titu-con {
+        color: $color-header;
+        @include center-text;
+    }
+
+    p {
+        color: $color-header;
+        font-size: 17px;
+        line-height: 1.6;
+        margin-bottom: 30px;
+    }
+
+    a {
+        font-size: 17px;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        margin-bottom: 15px;
+        color: black;
+        font-weight: 700;
+    }
+
+    .datos {
+        color: $color-resaltar;
+    }
+
+    form {
+        .campo, textarea {
+            width: 90%;
+            padding: 15px 15px;
+            font-size: 15px;
+            border: 1px solid;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            outline: 0;
+        }
+
+        textarea {
+            max-width: 530px;
+            min-width: none;
+            min-height: 140px;
+            max-height: 150px;
+        }
+
+        .btn-enviar {
+            padding: 15px;
+            font-size: 16px;
+            border: none;
+            outline: 0;
+            background-color: $color-resaltar;
+            color: $color-header;
+            border-radius: 3px;
+        }
+    }
+}
+
+// Estilos tablet
+@media screen and (min-width: 600px) {
+    // inicio
+    .contenedor section div img {
+        margin: 10%;
+    }
+
+    .cajas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    // calendario
+    main h1 {
+        @include center-text;
+    }
+
+    .contenedor-cal1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .item-uno img,
+    .item-tres img {
+        height: 100%;
+    }
+
+    .contenedor-1 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fech-cero img,
+    .fech-dos img,
+    .fech-tres img,
+    .fech-cuatro img {
+        height: 80%;
+    }
+
+    // patrocinadores
+    .contenedor-pa {
+        margin: 5%;
+        margin-right: 10%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .patro-uno img,
+    .patro-tres img {
+        height: 80%;
+    }
+}
+
+// Estilos computadora
+@media screen and (min-width: 1024px) {
+    // inicio
+    .contenedor section div img {
+        margin-left: 25%;
+        width: 50%;
+    }
+
+    .cajas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contenedor-bio div img {
+        display: flex;
+        float: left;
+    }
+
+    // estilos de biografía
+    .li-bio {
+        margin-bottom: 25px;
+    }
+
+    // estilos de calendario
+    main h1 {
+        @include center-text;
+    }
+
+    .contenedor-cal1 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .item-uno img,
+    .item-dos img,
+    .item-tres img {
+        height: 100%;
+    }
+
+    .contenedor-1 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .fech-cero img,
+    .fech-uno img,
+    .fech-dos img,
+    .fech-tres img,
+    .fech-cuatro img {
+        height: 80%;
+    }
+
+    // estilos para patrocinadores
+    .contenedor-pa {
+        margin: 5%;
+        margin-right: 10%;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        column-gap: 5%;
+    }
+
+    .patro-uno img,
+    .patro-dos img,
+    .patro-tres img {
+        height: 70%;
+        width: 95%;
+    }
+
+    // estilos para contactos
+    .contenedor-form {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 50px;
+        margin-top: 90px;
+    }
+}
